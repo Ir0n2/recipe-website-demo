@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.Logo {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+ padding: 5px;
+}
+
+.copyright {
+display: flex;
+align-items: flex-end;
+color: white;
+margin-right: auto;
+margin-left: auto;
+
+padding: 10px;
+height: 600px;
+vertical-align: bottom;
+horizontal-align: center;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
+
+<script>
+	function word(num) {
+	var ingredients;
+	var title;
+	var instructions;
+	//par is a paragraph of words
+	switch (num) {
+	case 0:	
+		instructions = "iinstructing";
+		ingredients = "this works";
+		title = "Raspberry pie";
+		break;
+	case 1:
+                instructions = "henlo world";
+		ingredients = "this works too";
+		title = "lemon pie";
+		break;
+	case 2:
+                instructions = "the fitness grand pacer test";
+		ingredients = " These are the kitchen staples you'll need to make the best chocolate chip cookies of your lifeButter: This classic chocolate chip cookie recipe starts with two sticks of butter creamed with white and brown sugars. The blend of sugars creates a perfectly balanced flavor. Eggs: Eggs add moisture and act as a binding agent, which means they help hold the dough together. Vanilla: Vanilla extract enhances the overall flavor of the chocolate chip cookies. Baking soda: Baking soda acts as a leavener, which means it helps the cookies rise. Water: A bit of hot water creates steam as it bakes, working with the baking soda to puff the cookies up.";
+		title = "cookies";
+		break;
+	case 3:
+		instructions = "henlo world";
+                ingredients = "1: mr noodles 2: water";
+                title = "mr noodles";
+                break;
+
+		}
+	document.getElementById("instructions").innerHTML = instructions;
+	document.getElementById("title").innerHTML = title;
+	document.getElementById("ingredients").innerHTML = ingredients;
+		}
+</script>
+
+</head>
+<body>
+
+<div class="sidenav">
+
+    <img src="data:image/png;base64,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" alt="Logo" class="Logo" style="width:90px;height:90px;"> 
+
+  <button class="button" onclick='word(0)'>Raspberry pie</button>
+  <button class="button" onclick='word(1)'>Lemon pie</button>
+  <button class="button" onclick='word(2)'>Cookies</button>
+  <button class="button" onclick='word(3)'>whatever</button>
+
+  <p class="copyright">This is just a demo.<br /> Site made by Rory Macdonald. 2023</p>
+
+
+</div>
+
+<div class="content">
+	<h1><p id="title">CSS Template</p></h1>
+	<h2>Ingredients</h2>
+  <p id="ingredients">A full-height, fixed sidenav and content.</p>
+  	<h2>Instructions</h2>
+  <p id="instructions">Instructions</p>
+
+</div>
+
+</body>
+</html>
+
